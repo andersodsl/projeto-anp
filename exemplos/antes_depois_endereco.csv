@@ -1,0 +1,121 @@
+﻿endereco_antes;tipo;logradouro;numero;sem_numero;km;regras_aplicadas;regra
+RODOVIA BR-101, SN;RODOVIA;BR 101;;True;;"br_formato;sem_numero_variante";sem_numero_variante
+RUA SETENTRIONAL, SN;RUA;SETENTRIONAL;;True;;sem_numero_variante;sem_numero_variante
+RODOVIA LOMANTO JR, SN;RODOVIA;LOMANTO JR;;True;88;"km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR 242, S N;RODOVIA;BR 242;;True;330;"km_do_complemento;sem_numero_variante";sem_numero_variante
+ESTRADA JACOBINA MIGUEL CALMON, SN;ESTRADA;JACOBINA MIGUEL CALMON;;True;;sem_numero_variante;sem_numero_variante
+AV TENENTE FREDERICO GUSTAVO DOS SANTOS, SN;AVENIDA;TENENTE FREDERICO GUSTAVO DOS SANTOS;;True;;"sem_numero_variante;tipo_abreviado";sem_numero_variante
+RODOVIA BR 101 KM 657, SN;RODOVIA;BR 101;;True;657;"km_extraido;sem_numero_variante";sem_numero_variante
+RODOVIA BA 887, SN;RODOVIA;BA 887;;True;;sem_numero_variante;sem_numero_variante
+RODOVIA CE 208, S N;RODOVIA;CE 208;;True;15;"km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR 222, SN;RODOVIA;BR 222;;True;244;"km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR-381, SN;RODOVIA;BR 381;;True;416;"br_formato;km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR 452 KM 261, SN;RODOVIA;BR 452;;True;261;"km_extraido;sem_numero_variante";sem_numero_variante
+RODOVIA BR 040, S N;RODOVIA;BR 040;;True;678;"km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR ZERO QUARENTA, SN;RODOVIA;BR 040;;True;5053;"br_por_extenso;km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR 259, SN;RODOVIA;BR 259;;True;82;"km_do_complemento;sem_numero_variante";sem_numero_variante
+RODOVIA BR ZERO QUARENTA, SN;RODOVIA;BR 040;;True;5053;"br_por_extenso;km_do_complemento;sem_numero_variante";br_por_extenso
+RODOVIA BR QUATROCENTOS E VINTE E DOIS, SN;RODOVIA;BR 422;;True;7;"br_por_extenso;km_do_complemento;sem_numero_variante";br_por_extenso
+RODOVIA BR CENTO E UM, 668;RODOVIA;BR 101;668;False;;br_por_extenso;br_por_extenso
+BR CENTO CINQUENTA E TRES, SN;RODOVIA;BR 153;;True;187;"br_por_extenso;km_do_complemento;sem_numero_variante;tipo_inferido_br";br_por_extenso
+RODOVIA BR CENTO E TRINTA E CINCO, S/N;RODOVIA;BR 135;;True;539;"br_por_extenso;km_do_complemento";br_por_extenso
+RODOVIA BR ZERO VINTE KM 76, S/N;RODOVIA;BR 020;;True;76;"br_por_extenso;km_extraido";br_por_extenso
+RODOVIA BR CENTO E DEZESSEIS, S/N;RODOVIA;BR 116;;True;205;"br_por_extenso;km_do_complemento";br_por_extenso
+RODOVIA BR-CENTO E UM, SN;RODOVIA;BR 101;;True;213;"br_por_extenso;km_do_complemento;sem_numero_variante";br_por_extenso
+BR QUATROCENTOS E DEZOITO, SN;RODOVIA;BR 418;;True;04;"br_por_extenso;km_do_complemento;sem_numero_variante;tipo_inferido_br";br_por_extenso
+RODOVIA BR CENTO E UM, 550;RODOVIA;BR 101;550;False;70;"br_por_extenso;km_do_complemento";br_por_extenso
+RODOVIA BR CENTO E UM, 5000;RODOVIA;BR 101;5000;False;;br_por_extenso;br_por_extenso
+RODOVIA BR TREZENTOS E CINQUENTA E SEIS, 520;RODOVIA;BR 356;520;False;;br_por_extenso;br_por_extenso
+RODOVIA BR CENTO E DEZESSEIS, 17310;RODOVIA;BR 116;17310;False;;br_por_extenso;br_por_extenso
+RODOVIA BR CENTO E DEZESSEIS, SN;RODOVIA;BR 116;;True;111;"br_por_extenso;km_do_complemento;sem_numero_variante";br_por_extenso
+RODOVIA BR CENTO E HUM, S/N;RODOVIA;BR 101;;True;275;"br_por_extenso;km_do_complemento";br_por_extenso
+RODOVIA BR-101, SN;RODOVIA;BR 101;;True;;"br_formato;sem_numero_variante";br_formato
+AVENIDA PAULO AFONSO - BR-235 KM-155, 110;AVENIDA;PAULO AFONSO - BR 235;110;False;155;"br_formato;km_extraido";br_formato
+RODOVIA BR-381, SN;RODOVIA;BR 381;;True;416;"br_formato;km_do_complemento;sem_numero_variante";br_formato
+RODOVIA BR-040, 771;RODOVIA;BR 040;771;False;;br_formato;br_formato
+BR. 216, KM 23, S/N;RODOVIA;BR 216;;True;23;"br_formato;km_extraido;tipo_inferido_br";br_formato
+RODOVIA BR-158, S/N;RODOVIA;BR 158;;True;;br_formato;br_formato
+RODOVIA BR-386, 1600;RODOVIA;BR 386;1600;False;445;"br_formato;km_do_complemento";br_formato
+RODOVIA BR-277 CURITIBA-PARANAGUA, 793;RODOVIA;BR 277 CURITIBA-PARANAGUA;793;False;;br_formato;br_formato
+RODOVIA BR-010 KM 237, S/N;RODOVIA;BR 010;;True;237;"br_formato;km_extraido";br_formato
+RODOVIA MELO PEIXOTO BR-369, S/N;RODOVIA;MELO PEIXOTO BR 369;;True;163;"br_formato;km_do_complemento";br_formato
+RODOVIA BR-356, 20;RODOVIA;BR 356;20;False;;br_formato;br_formato
+RODOVIA BR-040, 0;RODOVIA;BR 040;0;False;794;"br_formato;km_do_complemento";br_formato
+RODOVIA BR-277, S/N;RODOVIA;BR 277;;True;;br_formato;br_formato
+RODOVIA BR-386, 7380;RODOVIA;BR 386;7380;False;;br_formato;br_formato
+RODOVIA BR-265, 0;RODOVIA;BR 265;0;False;256;"br_formato;km_do_complemento";br_formato
+RUA RUA MARIA BARBOSA CARNEIRO, 385;RUA;MARIA BARBOSA CARNEIRO;385;False;;tipo_duplicado;tipo_duplicado
+RODOVIA ROD MARGEM DA PE 75, KM 01, S/N;RODOVIA;MARGEM DA PE 75;;True;01;"km_extraido;tipo_duplicado;tipo_abreviado";tipo_duplicado
+RODOVIA RODOVIA BR 343, S/N;RODOVIA;BR 343;;True;90;"km_do_complemento;tipo_duplicado";tipo_duplicado
+AVENIDA AVENIDA CONSTANTINO NERI, 1977;AVENIDA;CONSTANTINO NERI;1977;False;;tipo_duplicado;tipo_duplicado
+QUADRA QUADRA 11 LOTE, 21;QUADRA;11 LOTE;21;False;;tipo_duplicado;tipo_duplicado
+QUADRA QUADRA 13, SN;QUADRA;13;;True;32;"km_do_complemento;sem_numero_variante;tipo_duplicado";tipo_duplicado
+RUA RUA SANTA LUZIA, SN;RUA;SANTA LUZIA;;True;;"sem_numero_variante;tipo_duplicado";tipo_duplicado
+MARGEM MARGEM DO PARANA DO URUCARA, S/N;MARGEM;DO PARANA DO URUCARA;;True;;tipo_duplicado;tipo_duplicado
+RUA RUA DOS FERROVIARIOS, SN;RUA;DOS FERROVIARIOS;;True;;"sem_numero_variante;tipo_duplicado";tipo_duplicado
+AVENIDA AVENIDA PARANA, 1212;AVENIDA;PARANA;1212;False;;tipo_duplicado;tipo_duplicado
+RUA RUA SENADOR JOAO CAMARA, 395;RUA;SENADOR JOAO CAMARA;395;False;;tipo_duplicado;tipo_duplicado
+AVENIDA AV DOM GERALDO SIGAUD, 1380;AVENIDA;DOM GERALDO SIGAUD;1380;False;;"tipo_duplicado;tipo_abreviado";tipo_duplicado
+LOTEAMENTO LOTEAMENTO COLINA DOS PASSAROS, SN;LOTEAMENTO;COLINA DOS PASSAROS;;True;;"sem_numero_variante;tipo_duplicado";tipo_duplicado
+AVENIDA AV NOSSA SENHORA DE FATIMA, 2527;AVENIDA;NOSSA SENHORA DE FATIMA;2527;False;;"tipo_duplicado;tipo_abreviado";tipo_duplicado
+RODOVIA RODOVIA BR 101 / BR 418, S/N;RODOVIA;BR 101 / BR 418;;True;;tipo_duplicado;tipo_duplicado
+AV. MARECHAL DEODORO, 1700;AVENIDA;MARECHAL DEODORO;1700;False;;tipo_abreviado;tipo_abreviado
+PRAÇA CASTRO ALVES, 100;PRACA;CASTRO ALVES;100;False;;tipo_abreviado;tipo_abreviado
+AV TENENTE FREDERICO GUSTAVO DOS SANTOS, SN;AVENIDA;TENENTE FREDERICO GUSTAVO DOS SANTOS;;True;;"sem_numero_variante;tipo_abreviado";tipo_abreviado
+PRAÇA SAO SEBASTIAO, 100;PRACA;SAO SEBASTIAO;100;False;;tipo_abreviado;tipo_abreviado
+LOC TREVO 2 ETAPA VALPARAISO I, SN;LOCALIDADE;TREVO 2 ETAPA VALPARAISO I;;True;;"sem_numero_variante;tipo_abreviado";tipo_abreviado
+RODOVIA ROD MARGEM DA PE 75, KM 01, S/N;RODOVIA;MARGEM DA PE 75;;True;01;"km_extraido;tipo_duplicado;tipo_abreviado";tipo_abreviado
+ROD BA 142 KM 100, S/N;RODOVIA;BA 142;;True;100;"km_extraido;tipo_abreviado";tipo_abreviado
+ROD. MG 030, 8625;RODOVIA;MG 030;8625;False;;tipo_abreviado;tipo_abreviado
+PRAÇA EDUARDO GOMES, S/N;PRACA;EDUARDO GOMES;;True;;tipo_abreviado;tipo_abreviado
+AV. DEDE BRASIL, 5.255;AVENIDA;DEDE BRASIL;5.255;False;;tipo_abreviado;tipo_abreviado
+AV. MOACIR DE PAULA VIEIRA, 1780;AVENIDA;MOACIR DE PAULA VIEIRA;1780;False;;tipo_abreviado;tipo_abreviado
+EST DAS PITAS, 899;ESTRADA;DAS PITAS;899;False;;tipo_abreviado;tipo_abreviado
+ROD. BR 116, S/N;RODOVIA;BR 116;;True;472;"km_do_complemento;tipo_abreviado";tipo_abreviado
+PRAÇA JAIR GALINDO DE SOUZA, 07;PRACA;JAIR GALINDO DE SOUZA;07;False;;tipo_abreviado;tipo_abreviado
+ROD. BR 010, S/N;RODOVIA;BR 010;;True;1420;"km_do_complemento;tipo_abreviado";tipo_abreviado
+RUA PREFEITO OLIMPIO DE MELO, 1083-A;RUA;PREFEITO OLIMPIO DE MELO;1083A;False;;numero_sufixo;numero_sufixo
+AVENIDA PERIMETRAL DAS SAMAMBAIAS, 975 N;AVENIDA;PERIMETRAL DAS SAMAMBAIAS;975N;False;;numero_sufixo;numero_sufixo
+RUA CELSO ROSA LIMA, 771 N;RUA;CELSO ROSA LIMA;771N;False;;numero_sufixo;numero_sufixo
+AVENIDA ODAIR LUIZ VERONESE, 86 N;AVENIDA;ODAIR LUIZ VERONESE;86N;False;;numero_sufixo;numero_sufixo
+RUA ITAJAI, 327-A;RUA;ITAJAI;327A;False;;numero_sufixo;numero_sufixo
+AVENIDA LONDRINA, 29-W;AVENIDA;LONDRINA;29W;False;;numero_sufixo;numero_sufixo
+RUA BELA VISTA DE SAO JOAO, 01-A;RUA;BELA VISTA DE SAO JOAO;01A;False;;numero_sufixo;numero_sufixo
+AVENIDA DAS ARARAS, 1060 W;AVENIDA;DAS ARARAS;1060W;False;;numero_sufixo;numero_sufixo
+AVENIDA PERIMETRAL NORTE, 603-E;AVENIDA;PERIMETRAL NORTE;603E;False;;numero_sufixo;numero_sufixo
+AVENIDA RIO ARINOS, 1562-W;AVENIDA;RIO ARINOS;1562W;False;;numero_sufixo;numero_sufixo
+RUA VISCONDE DO RIO BRANCO, 269-D;RUA;VISCONDE DO RIO BRANCO;269D;False;;numero_sufixo;numero_sufixo
+AVENIDA BRASIL, 41-E;AVENIDA;BRASIL;41E;False;;numero_sufixo;numero_sufixo
+RUA RIO BRANCO, 107-A;RUA;RIO BRANCO;107A;False;;numero_sufixo;numero_sufixo
+AVENIDA J.K., 71 N;AVENIDA;J.K;71N;False;;numero_sufixo;numero_sufixo
+AVENIDA FERNANDO MACHADO, 375-D;AVENIDA;FERNANDO MACHADO;375D;False;;numero_sufixo;numero_sufixo
+RODOVIA BR 116 - KM 119, S/N;RODOVIA;BR 116;;True;119;km_extraido;km_extraido
+AVENIDA PAULO AFONSO - BR-235 KM-155, 110;AVENIDA;PAULO AFONSO - BR 235;110;False;155;"br_formato;km_extraido";km_extraido
+RODOVIA BR 101 KM 657, SN;RODOVIA;BR 101;;True;657;"km_extraido;sem_numero_variante";km_extraido
+RODOVIA BR 452 KM 261, SN;RODOVIA;BR 452;;True;261;"km_extraido;sem_numero_variante";km_extraido
+RODOVIA BR 354, KM 310, S/N;RODOVIA;BR 354;;True;310;km_extraido;km_extraido
+BR. 216, KM 23, S/N;RODOVIA;BR 216;;True;23;"br_formato;km_extraido;tipo_inferido_br";km_extraido
+RODOVIA TRANSAMAZONICA KM 130, S/N;RODOVIA;TRANSAMAZONICA;;True;130;km_extraido;km_extraido
+RODOVIA BR 222 KM 04, 2490;RODOVIA;BR 222;2490;False;04;km_extraido;km_extraido
+RODOVIA GO 206, KM 09;RODOVIA;GO 206;;True;09;km_extraido;km_extraido
+RODOVIA BR 060 - KM 03 - DIR., S/N;RODOVIA;BR 060 - DIR;;True;03;km_extraido;km_extraido
+RODOVIA PR 160 - KM 97, S/N;RODOVIA;PR 160;;True;97;km_extraido;km_extraido
+RODOVIA BR 277, KM 421,5, S/N;RODOVIA;BR 277;;True;421.5;km_extraido;km_extraido
+RODOVIA BR 101, KM 578;RODOVIA;BR 101;;True;578;km_extraido;km_extraido
+RODOVIA ROD MARGEM DA PE 75, KM 01, S/N;RODOVIA;MARGEM DA PE 75;;True;01;"km_extraido;tipo_duplicado;tipo_abreviado";km_extraido
+BR 110, KM 14;RODOVIA;BR 110;;True;14;"km_extraido;tipo_inferido_br";km_extraido
+RODOVIA BR 423, S/N;RODOVIA;BR 423;;True;26;km_do_complemento;km_do_complemento
+LOCALIDADE AL 101 NORTE, S/N;LOCALIDADE;AL 101 NORTE;;True;105;km_do_complemento;km_do_complemento
+RODOVIA LOMANTO JR, SN;RODOVIA;LOMANTO JR;;True;88;"km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA BR 242, S N;RODOVIA;BR 242;;True;330;"km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA JEQUIE IPIAU, S/N;RODOVIA;JEQUIE IPIAU;;True;27;km_do_complemento;km_do_complemento
+RODOVIA BARRINHA / CARAIBA, S/N;RODOVIA;BARRINHA / CARAIBA;;True;41;km_do_complemento;km_do_complemento
+RODOVIA CE 208, S N;RODOVIA;CE 208;;True;15;"km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA BR 222, SN;RODOVIA;BR 222;;True;244;"km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA MG 164, S/N;RODOVIA;MG 164;;True;178;km_do_complemento;km_do_complemento
+RODOVIA BR 116, S/N;RODOVIA;BR 116;;True;624;km_do_complemento;km_do_complemento
+RODOVIA BR-381, SN;RODOVIA;BR 381;;True;416;"br_formato;km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA BR 040, S N;RODOVIA;BR 040;;True;678;"km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA BR ZERO QUARENTA, SN;RODOVIA;BR 040;;True;5053;"br_por_extenso;km_do_complemento;sem_numero_variante";km_do_complemento
+RODOVIA BR 262, S/N;RODOVIA;BR 262;;True;175;km_do_complemento;km_do_complemento
+RODOVIA BR 259, SN;RODOVIA;BR 259;;True;82;"km_do_complemento;sem_numero_variante";km_do_complemento
