@@ -66,7 +66,8 @@ def main():
 
     # dicionário de sinônimos de bandeira (opcional)
     if os.path.exists(DICIONARIO):
-        dic = pd.read_csv(DICIONARIO, sep=";", dtype=str).dropna()
+        dic = pd.read_csv(DICIONARIO, sep=";", dtype=str, encoding="utf-8-sig").dropna()
+        dic = dic.apply(lambda coluna: coluna.str.strip())
         mapa = dict(zip(dic["sinonimo"], dic["bandeira_canonica"]))
         print(f"Dicionário de bandeiras: {len(mapa)} entradas")
     else:

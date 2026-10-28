@@ -964,6 +964,7 @@ RS;VILA MARIA;3;2;66.7;5556;muito concentrado
 RS;WESTFALIA;3;2;66.7;5556;muito concentrado
 SC;AGRONOMICA;3;2;66.7;5556;muito concentrado
 SC;ANCHIETA;3;2;66.7;5556;muito concentrado
+SC;BALNEARIO RINCAO;3;2;66.7;5556;muito concentrado
 SC;JACINTO MACHADO;3;2;66.7;5556;muito concentrado
 SC;LUZERNA;3;2;66.7;5556;muito concentrado
 SC;MASSARANDUBA;3;2;66.7;5556;muito concentrado
@@ -2128,6 +2129,7 @@ MG;ILICINEA;4;3;50.0;3750;muito concentrado
 MG;INDIANOPOLIS;4;3;50.0;3750;muito concentrado
 MG;ITACARAMBI;4;3;50.0;3750;muito concentrado
 MG;JABOTICATUBAS;4;3;50.0;3750;muito concentrado
+MG;MANGA;4;3;50.0;3750;muito concentrado
 MG;MATIAS BARBOSA;4;3;50.0;3750;muito concentrado
 MG;POTE;4;3;50.0;3750;muito concentrado
 MG;RIO VERMELHO;4;3;50.0;3750;muito concentrado
@@ -2201,6 +2203,7 @@ RS;SEVERIANO DE ALMEIDA;4;3;50.0;3750;muito concentrado
 RS;TRINDADE DO SUL;4;3;50.0;3750;muito concentrado
 SC;BALNEARIO GAIVOTA;4;3;50.0;3750;muito concentrado
 SC;BENEDITO NOVO;4;3;50.0;3750;muito concentrado
+SC;CATANDUVAS;4;3;50.0;3750;muito concentrado
 SC;CORUPA;4;3;50.0;3750;muito concentrado
 SC;GUARACIABA;4;3;50.0;3750;muito concentrado
 SC;MAJOR GERCINO;4;3;50.0;3750;muito concentrado
@@ -2821,7 +2824,6 @@ SC;ARMAZEM;3;3;33.3;3333;muito concentrado
 SC;ASCURRA;3;3;33.3;3333;muito concentrado
 SC;ATALANTA;3;3;33.3;3333;muito concentrado
 SC;BALNEARIO BARRA DO SUL;3;3;33.3;3333;muito concentrado
-SC;BALNEARIO RINCAO;3;3;33.3;3333;muito concentrado
 SC;BRUNOPOLIS;3;3;33.3;3333;muito concentrado
 SC;CAIBI;3;3;33.3;3333;muito concentrado
 SC;CAMPO ERE;3;3;33.3;3333;muito concentrado
@@ -3410,7 +3412,6 @@ MG;JEQUERI;4;4;25.0;2500;moderadamente concentrado
 MG;JURUAIA;4;4;25.0;2500;moderadamente concentrado
 MG;LAGOA FORMOSA;4;4;25.0;2500;moderadamente concentrado
 MG;LAGOA GRANDE;4;4;25.0;2500;moderadamente concentrado
-MG;MANGA;4;4;25.0;2500;moderadamente concentrado
 MG;MENDES PIMENTEL;4;4;25.0;2500;moderadamente concentrado
 MG;MIRADOURO;4;4;25.0;2500;moderadamente concentrado
 MG;MONSENHOR PAULO;4;4;25.0;2500;moderadamente concentrado
@@ -3613,7 +3614,6 @@ RS;VALE DO SOL;4;4;25.0;2500;moderadamente concentrado
 SC;BOM RETIRO;4;4;25.0;2500;moderadamente concentrado
 SC;BOMBINHAS;4;4;25.0;2500;moderadamente concentrado
 SC;CANELINHA;4;4;25.0;2500;moderadamente concentrado
-SC;CATANDUVAS;4;4;25.0;2500;moderadamente concentrado
 SC;COCAL DO SUL;4;4;25.0;2500;moderadamente concentrado
 SC;CORONEL FREITAS;4;4;25.0;2500;moderadamente concentrado
 SC;DIONISIO CERQUEIRA;4;4;25.0;2500;moderadamente concentrado
@@ -3697,6 +3697,7 @@ SP;SAO PEDRO;11;6;36.4;2397;moderadamente concentrado
 ES;COLATINA;24;7;37.5;2396;moderadamente concentrado
 CE;SAO GONCALO DO AMARANTE;17;6;29.4;2388;moderadamente concentrado
 SP;SANTOS;55;15;36.4;2370;moderadamente concentrado
+SC;BRUSQUE;34;9;35.3;2370;moderadamente concentrado
 ES;VITORIA;48;11;41.7;2361;moderadamente concentrado
 RS;GRAMADO;12;7;41.7;2361;moderadamente concentrado
 RS;SAPIRANGA;12;7;41.7;2361;moderadamente concentrado
@@ -3705,10 +3706,11 @@ MG;BRUMADINHO;9;5;33.3;2346;moderadamente concentrado
 MG;CATAGUASES;9;5;33.3;2346;moderadamente concentrado
 SC;BALNEARIO PICARRAS;9;5;33.3;2346;moderadamente concentrado
 SP;CABREUVA;9;5;33.3;2346;moderadamente concentrado
-SC;BRUSQUE;34;10;35.3;2318;moderadamente concentrado
 CE;ITAITINGA;13;7;38.5;2308;moderadamente concentrado
 SP;CAPIVARI;13;7;38.5;2308;moderadamente concentrado
+SC;BALNEARIO CAMBORIU;33;11;39.4;2305;moderadamente concentrado
 SP;BARUERI;56;16;39.3;2302;moderadamente concentrado
+SC;CRICIUMA;48;18;43.8;2300;moderadamente concentrado
 MG;NOVA LIMA;23;7;30.4;2287;moderadamente concentrado
 SP;ITANHAEM;22;8;36.4;2273;moderadamente concentrado
 RO;CACOAL;28;7;35.7;2270;moderadamente concentrado
@@ -3748,7 +3750,6 @@ RS;SANANDUVA;7;5;28.6;2245;moderadamente concentrado
 SP;JARINU;7;5;28.6;2245;moderadamente concentrado
 SP;MONGAGUA;7;5;28.6;2245;moderadamente concentrado
 SP;PILAR DO SUL;7;5;28.6;2245;moderadamente concentrado
-SC;CRICIUMA;48;19;43.8;2240;moderadamente concentrado
 DF;BRASILIA;392;58;37.8;2237;moderadamente concentrado
 RS;PANAMBI;11;5;27.3;2231;moderadamente concentrado
 RS;ROSARIO DO SUL;11;6;36.4;2231;moderadamente concentrado
@@ -3855,7 +3856,6 @@ MG;RIBEIRAO DAS NEVES;23;7;34.8;2212;moderadamente concentrado
 PE;PAUDALHO;10;6;30.0;2200;moderadamente concentrado
 RS;GARIBALDI;10;6;30.0;2200;moderadamente concentrado
 RS;SANTA VITORIA DO PALMAR;10;6;30.0;2200;moderadamente concentrado
-SC;BALNEARIO CAMBORIU;33;12;39.4;2195;moderadamente concentrado
 MG;CONGONHAS;13;6;30.8;2189;moderadamente concentrado
 RS;SANTIAGO;13;7;38.5;2189;moderadamente concentrado
 MG;OURO PRETO;16;6;31.2;2188;moderadamente concentrado
@@ -4183,6 +4183,7 @@ RS;FREDERICO WESTPHALEN;13;6;23.1;1953;moderadamente concentrado
 RS;MARAU;13;7;30.8;1953;moderadamente concentrado
 SP;PENAPOLIS;13;7;30.8;1953;moderadamente concentrado
 SP;PRESIDENTE VENCESLAU;13;7;30.8;1953;moderadamente concentrado
+SC;PALHOCA;56;18;39.3;1952;moderadamente concentrado
 RJ;SANTO ANTONIO DE PADUA;12;7;33.3;1944;moderadamente concentrado
 RS;FLORES DA CUNHA;12;7;33.3;1944;moderadamente concentrado
 SP;POA;12;7;33.3;1944;moderadamente concentrado
@@ -4190,7 +4191,6 @@ MG;MONTES CLAROS;55;14;25.5;1940;moderadamente concentrado
 RS;OSORIO;28;10;35.7;1939;moderadamente concentrado
 SP;ITAPEVI;14;8;35.7;1939;moderadamente concentrado
 SP;SAO SEBASTIAO;21;10;33.3;1927;moderadamente concentrado
-SC;PALHOCA;56;19;39.3;1920;moderadamente concentrado
 RS;NOVO HAMBURGO;46;23;41.3;1919;moderadamente concentrado
 SP;LENCOIS PAULISTA;18;11;38.9;1914;moderadamente concentrado
 MG;BOCAIUVA;15;7;26.7;1911;moderadamente concentrado
@@ -4220,6 +4220,7 @@ RO;GUAJARA-MIRIM;8;6;25.0;1875;moderadamente concentrado
 RS;RIO PARDO;8;6;25.0;1875;moderadamente concentrado
 RS;SAO SEBASTIAO DO CAI;8;6;25.0;1875;moderadamente concentrado
 RS;TRAMANDAI;8;6;25.0;1875;moderadamente concentrado
+SC;SAO JOAO DO SUL;8;6;25.0;1875;moderadamente concentrado
 SC;SAO JOSE DO CEDRO;8;6;25.0;1875;moderadamente concentrado
 SP;FRANCISCO MORATO;8;6;25.0;1875;moderadamente concentrado
 SP;PEDREIRA;8;6;25.0;1875;moderadamente concentrado
@@ -4246,9 +4247,11 @@ RJ;BOM JESUS DO ITABAPOANA;9;7;33.3;1852;moderadamente concentrado
 SC;FORQUILHINHA;9;6;22.2;1852;moderadamente concentrado
 SP;AGUDOS;9;7;33.3;1852;moderadamente concentrado
 SP;PALMITAL;9;7;33.3;1852;moderadamente concentrado
+SC;ARARANGUA;20;10;35.0;1850;moderadamente concentrado
 MG;CORONEL FABRICIANO;21;9;23.8;1837;moderadamente concentrado
 SC;CONCORDIA;21;8;28.6;1837;moderadamente concentrado
 PB;BAYEUX;14;9;35.7;1837;moderadamente concentrado
+SC;TIJUCAS;14;9;35.7;1837;moderadamente concentrado
 AL;CORURIPE;7;6;28.6;1837;moderadamente concentrado
 BA;BAIXA GRANDE;7;6;28.6;1837;moderadamente concentrado
 BA;BONITO;7;6;28.6;1837;moderadamente concentrado
@@ -4347,7 +4350,6 @@ SP;CAIEIRAS;17;9;29.4;1765;moderadamente concentrado
 SP;RIBEIRAO PIRES;17;9;29.4;1765;moderadamente concentrado
 MG;CONTAGEM;121;27;28.1;1761;moderadamente concentrado
 RS;IJUI;28;12;35.7;1760;moderadamente concentrado
-SC;ARARANGUA;20;11;35.0;1750;moderadamente concentrado
 SC;ITAJAI;51;18;37.3;1749;moderadamente concentrado
 BA;EUCLIDES DA CUNHA;19;12;36.8;1745;moderadamente concentrado
 CE;RUSSAS;19;12;36.8;1745;moderadamente concentrado
@@ -4360,12 +4362,13 @@ RS;TRIUNFO;11;7;27.3;1736;moderadamente concentrado
 SC;PORTO UNIAO;11;7;27.3;1736;moderadamente concentrado
 CE;ITAREMA;14;8;28.6;1735;moderadamente concentrado
 PR;MARIALVA;14;8;28.6;1735;moderadamente concentrado
-SC;TIJUCAS;14;10;35.7;1735;moderadamente concentrado
 MG;LEOPOLDINA;16;9;31.2;1719;moderadamente concentrado
 PA;ORIXIMINA;16;7;25.0;1719;moderadamente concentrado
+SC;SAO MIGUEL DO OESTE;13;7;23.1;1716;moderadamente concentrado
 RS;SANTANA DO LIVRAMENTO;27;10;25.9;1715;moderadamente concentrado
 SP;VOTUPORANGA;28;13;32.1;1709;moderadamente concentrado
 SP;JUNDIAI;84;32;29.8;1704;moderadamente concentrado
+SC;FLORIANOPOLIS;93;28;31.2;1696;moderadamente concentrado
 PB;JOAO PESSOA;122;28;26.2;1677;moderadamente concentrado
 RS;ERECHIM;39;11;28.2;1677;moderadamente concentrado
 RS;SANTA CRUZ DO SUL;46;12;28.3;1673;moderadamente concentrado
@@ -4528,7 +4531,6 @@ BA;ITATIM;14;9;28.6;1633;moderadamente concentrado
 RS;SOLEDADE;14;8;21.4;1633;moderadamente concentrado
 RR;BOA VISTA;85;17;27.1;1632;moderadamente concentrado
 SP;TABOAO DA SERRA;24;13;33.3;1632;moderadamente concentrado
-SC;FLORIANOPOLIS;93;29;31.2;1631;moderadamente concentrado
 RS;SANTA ROSA;26;11;30.8;1627;moderadamente concentrado
 SP;SANTA CRUZ DO RIO PARDO;17;12;35.3;1626;moderadamente concentrado
 MG;VARGINHA;38;20;36.8;1620;moderadamente concentrado
@@ -4570,7 +4572,6 @@ PB;MAMANGUAPE;13;9;30.8;1598;moderadamente concentrado
 PI;JOSE DE FREITAS;13;9;30.8;1598;moderadamente concentrado
 PR;SARANDI;13;9;30.8;1598;moderadamente concentrado
 PR;UNIAO DA VITORIA;13;9;30.8;1598;moderadamente concentrado
-SC;SAO MIGUEL DO OESTE;13;8;23.1;1598;moderadamente concentrado
 SP;ARACOIABA DA SERRA;13;9;30.8;1598;moderadamente concentrado
 SP;PRESIDENTE EPITACIO;13;9;30.8;1598;moderadamente concentrado
 PR;CURITIBA;348;93;29.6;1593;moderadamente concentrado
@@ -4582,6 +4583,7 @@ MG;SALINAS;11;8;27.3;1570;moderadamente concentrado
 PE;EXU;11;8;27.3;1570;moderadamente concentrado
 SC;GUARAMIRIM;11;8;27.3;1570;moderadamente concentrado
 SP;PIRAJU;11;8;27.3;1570;moderadamente concentrado
+SC;JOINVILLE;108;25;25.9;1567;moderadamente concentrado
 SP;DIADEMA;57;23;28.1;1567;moderadamente concentrado
 SP;OSASCO;95;34;27.4;1566;moderadamente concentrado
 PE;ARCOVERDE;21;12;33.3;1565;moderadamente concentrado
@@ -4646,11 +4648,11 @@ RS;IGREJINHA;8;7;25.0;1562;moderadamente concentrado
 RS;IMBE;8;7;25.0;1562;moderadamente concentrado
 RS;NOVA PETROPOLIS;8;7;25.0;1562;moderadamente concentrado
 SC;ILHOTA;8;7;25.0;1562;moderadamente concentrado
-SC;SAO JOAO DO SUL;8;7;25.0;1562;moderadamente concentrado
 SC;XAXIM;8;7;25.0;1562;moderadamente concentrado
 SP;CASTILHO;8;7;25.0;1562;moderadamente concentrado
 SP;GUARARAPES;8;7;25.0;1562;moderadamente concentrado
 SP;MARTINOPOLIS;8;7;25.0;1562;moderadamente concentrado
+SC;VIDEIRA;17;10;29.4;1557;moderadamente concentrado
 AL;DELMIRO GOUVEIA;15;9;26.7;1556;moderadamente concentrado
 AM;SAO GABRIEL DA CACHOEIRA;15;8;20.0;1556;moderadamente concentrado
 MA;BARREIRINHAS;15;11;33.3;1556;moderadamente concentrado
@@ -4667,7 +4669,6 @@ SP;BOITUVA;14;9;28.6;1531;moderadamente concentrado
 PB;CABEDELO;12;8;25.0;1528;moderadamente concentrado
 AM;TEFE;19;10;26.3;1524;moderadamente concentrado
 SE;LAGARTO;19;12;31.6;1524;moderadamente concentrado
-SC;JOINVILLE;108;26;25.9;1519;moderadamente concentrado
 ES;SERRA;70;20;27.1;1518;moderadamente concentrado
 CE;CAUCAIA;61;21;23.0;1518;moderadamente concentrado
 SP;ARACATUBA;50;21;28.0;1512;moderadamente concentrado
@@ -5002,10 +5003,12 @@ RO;ROLIM DE MOURA;18;11;22.2;1235;pouco concentrado
 RS;ALVORADA;18;11;22.2;1235;pouco concentrado
 RS;CAMAQUA;18;10;16.7;1235;pouco concentrado
 MS;MARACAJU;14;10;21.4;1224;pouco concentrado
+SC;CANOINHAS;14;10;21.4;1224;pouco concentrado
 RJ;ITABORAI;30;17;26.7;1222;pouco concentrado
 BA;VALENCA;27;17;29.6;1221;pouco concentrado
 MT;LUCAS DO RIO VERDE;27;16;22.2;1221;pouco concentrado
 RS;BENTO GONCALVES;32;15;21.9;1211;pouco concentrado
+SC;JARAGUA DO SUL;37;14;21.6;1205;pouco concentrado
 SP;SALTO;21;14;23.8;1202;pouco concentrado
 MG;UBERLANDIA;149;61;26.2;1200;pouco concentrado
 AM;HUMAITA;15;11;20.0;1200;pouco concentrado
@@ -5063,7 +5066,6 @@ RJ;RIO DE JANEIRO;635;251;23.6;1156;pouco concentrado
 SP;FERNANDOPOLIS;31;20;29.0;1155;pouco concentrado
 SP;BARRETOS;36;22;27.8;1142;pouco concentrado
 BA;ITABUNA;34;21;23.5;1142;pouco concentrado
-SC;VIDEIRA;17;11;17.6;1142;pouco concentrado
 SC;SAO JOSE;61;28;21.3;1137;pouco concentrado
 SP;MARILIA;57;31;26.3;1136;pouco concentrado
 SP;VOTORANTIM;19;14;26.3;1136;pouco concentrado
@@ -5078,6 +5080,7 @@ SP;GARCA;13;11;23.1;1124;pouco concentrado
 PE;BODOCO;14;11;21.4;1122;pouco concentrado
 RN;CAICO;14;11;21.4;1122;pouco concentrado
 SP;INDAIATUBA;50;26;22.0;1120;pouco concentrado
+SC;CHAPECO;48;17;18.8;1120;pouco concentrado
 SP;BOTUCATU;37;20;24.3;1118;pouco concentrado
 BA;EUNAPOLIS;22;15;22.7;1116;pouco concentrado
 MT;NOVA MUTUM;21;14;23.8;1111;pouco concentrado
@@ -5135,6 +5138,7 @@ SP;OSVALDO CRUZ;9;9;11.1;1111;pouco concentrado
 SP;POTIRENDABA;9;9;11.1;1111;pouco concentrado
 SP;SAO SIMAO;9;9;11.1;1111;pouco concentrado
 TO;DIANOPOLIS;9;9;11.1;1111;pouco concentrado
+SC;LAGES;44;18;20.5;1105;pouco concentrado
 PB;SANTA RITA;25;16;24.0;1104;pouco concentrado
 GO;FORMOSA;40;22;22.5;1100;pouco concentrado
 AL;PALMEIRA DOS INDIOS;20;14;20.0;1100;pouco concentrado
@@ -5148,6 +5152,7 @@ PA;ANANINDEUA;62;19;19.4;1082;pouco concentrado
 PE;JABOATAO DOS GUARARAPES;51;25;27.5;1080;pouco concentrado
 PR;IRATI;19;13;21.1;1080;pouco concentrado
 RJ;BELFORD ROXO;19;15;26.3;1080;pouco concentrado
+SC;NAVEGANTES;19;13;21.1;1080;pouco concentrado
 PR;CAMBE;23;16;26.1;1078;pouco concentrado
 SC;RIO DO SUL;22;12;18.2;1074;pouco concentrado
 BA;CACULE;11;10;18.2;1074;pouco concentrado
@@ -5172,23 +5177,21 @@ RJ;MAGE;17;13;23.5;1073;pouco concentrado
 MG;GOVERNADOR VALADARES;65;28;20.0;1072;pouco concentrado
 SP;PINDAMONHANGABA;31;15;19.4;1072;pouco concentrado
 MG;CONSELHEIRO LAFAIETE;25;14;16.0;1072;pouco concentrado
+SC;TUBARAO;35;16;22.9;1069;pouco concentrado
 MA;IMPERATRIZ;70;32;25.7;1061;pouco concentrado
 RS;CANOAS;69;30;26.1;1061;pouco concentrado
 PI;BARRAS;18;13;22.2;1049;pouco concentrado
 ES;LINHARES;37;20;24.3;1045;pouco concentrado
 RS;PELOTAS;83;24;21.7;1044;pouco concentrado
 SP;ITU;30;17;20.0;1044;pouco concentrado
-SC;LAGES;44;19;20.5;1043;pouco concentrado
 MG;PATROCINIO;23;14;21.7;1040;pouco concentrado
 SP;LEME;23;16;21.7;1040;pouco concentrado
 RS;SAO LEOPOLDO;40;22;22.5;1038;pouco concentrado
 MG;POUSO ALEGRE;37;20;18.9;1030;pouco concentrado
-SC;JARAGUA DO SUL;37;15;16.2;1030;pouco concentrado
 BA;JUAZEIRO;64;42;29.7;1025;pouco concentrado
 AM;AUTAZES;19;13;21.1;1025;pouco concentrado
 TO;PARAISO DO TOCANTINS;19;13;15.8;1025;pouco concentrado
 PA;MOJU;15;12;20.0;1022;pouco concentrado
-SC;TUBARAO;35;17;22.9;1020;pouco concentrado
 BA;SANTO ESTEVAO;21;15;23.8;1020;pouco concentrado
 RJ;RESENDE;21;14;19.0;1020;pouco concentrado
 BA;RIBEIRA DO POMBAL;14;12;21.4;1020;pouco concentrado
@@ -5196,7 +5199,6 @@ MG;JANUARIA;14;11;14.3;1020;pouco concentrado
 PA;ALENQUER;14;12;21.4;1020;pouco concentrado
 PI;CAMPO MAIOR;14;12;21.4;1020;pouco concentrado
 RN;PAU DOS FERROS;14;11;14.3;1020;pouco concentrado
-SC;CANOINHAS;14;11;14.3;1020;pouco concentrado
 SP;PERUIBE;14;12;21.4;1020;pouco concentrado
 SP;SAO MANUEL;14;12;21.4;1020;pouco concentrado
 SP;GUARATINGUETA;26;15;19.2;1006;pouco concentrado
@@ -5236,6 +5238,7 @@ SP;SAO JOAQUIM DA BARRA;10;10;10.0;1000;pouco concentrado
 SP;AMERICANA;58;30;19.0;999;pouco concentrado
 PR;GUARAPUAVA;51;22;17.6;996;pouco concentrado
 BA;SIMOES FILHO;22;15;22.7;992;pouco concentrado
+SC;SAO BENTO DO SUL;22;13;18.2;992;pouco concentrado
 PI;FLORIANO;18;13;16.7;988;pouco concentrado
 RN;MOSSORO;67;28;19.4;978;pouco concentrado
 MG;PARA DE MINAS;21;13;14.3;975;pouco concentrado
@@ -5250,7 +5253,6 @@ PE;TAQUARITINGA DO NORTE;12;11;16.7;972;pouco concentrado
 PR;SAO MIGUEL DO IGUACU;12;11;16.7;972;pouco concentrado
 SP;ESPIRITO SANTO DO PINHAL;12;11;16.7;972;pouco concentrado
 MG;JANAUBA;19;14;21.1;970;pouco concentrado
-SC;NAVEGANTES;19;14;21.1;970;pouco concentrado
 SP;ITAPECERICA DA SERRA;19;14;21.1;970;pouco concentrado
 SP;SAO ROQUE;19;14;21.1;970;pouco concentrado
 PA;MARABA;66;30;16.7;964;pouco concentrado
@@ -5259,9 +5261,9 @@ BA;TEIXEIRA DE FREITAS;34;21;20.6;952;pouco concentrado
 MG;TRES CORACOES;20;14;20.0;950;pouco concentrado
 SP;TUPA;20;14;20.0;950;pouco concentrado
 BA;SALVADOR;219;103;24.7;949;pouco concentrado
-SC;CHAPECO;48;18;16.7;946;pouco concentrado
 ES;CARIACICA;47;24;19.1;946;pouco concentrado
 PR;TOLEDO;47;25;21.3;946;pouco concentrado
+SC;IMBITUBA;16;13;18.8;938;pouco concentrado
 SC;JOACABA;16;13;18.8;938;pouco concentrado
 PA;URUARA;17;13;17.6;934;pouco concentrado
 SP;PEDERNEIRAS;17;13;17.6;934;pouco concentrado
@@ -5358,7 +5360,6 @@ CE;MOMBACA;12;12;8.3;833;pouco concentrado
 PA;BREU BRANCO;12;12;8.3;833;pouco concentrado
 PB;GUARABIRA;12;12;8.3;833;pouco concentrado
 PR;GOIOERE;12;12;8.3;833;pouco concentrado
-SC;SAO BENTO DO SUL;22;14;13.6;826;pouco concentrado
 MG;TEOFILO OTONI;39;24;17.9;822;pouco concentrado
 BA;CAMPO ALEGRE DE LOURDES;14;13;14.3;816;pouco concentrado
 BA;CANSANCAO;14;13;14.3;816;pouco concentrado
@@ -5380,7 +5381,6 @@ MA;SANTA LUZIA;16;14;12.5;781;pouco concentrado
 PA;TOME-ACU;16;14;12.5;781;pouco concentrado
 PE;TRINDADE;16;14;12.5;781;pouco concentrado
 SC;CACADOR;16;14;12.5;781;pouco concentrado
-SC;IMBITUBA;16;14;12.5;781;pouco concentrado
 BA;ILHEUS;41;26;19.5;779;pouco concentrado
 BA;PORTO SEGURO;44;28;18.2;775;pouco concentrado
 MG;CARATINGA;26;19;15.4;769;pouco concentrado

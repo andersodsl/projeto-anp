@@ -27,7 +27,12 @@ O sistema mostra a **concentração de mercado do varejo de combustíveis por mu
 
 > **Limitação:** como a base não tem vendas, a concentração é medida pelo **número de postos** (presença), e não pela fatia real de mercado.
 
-> **A completar pela Naira:** descrição das telas do aplicativo (filtros, gráficos) quando o `app.py` estiver pronto.
+A aplicação (Streamlit, `src/app.py`) lê os dados **direto do banco PostgreSQL** e tem quatro abas:
+
+- **Município:** escolhendo UF e município, mostra o total de postos, o número de redes, o HHI por rede e por bandeira, os gráficos e tabelas de postos por bandeira e por rede.
+- **Rankings:** municípios mais e menos concentrados (com mínimo de postos ajustável), maiores redes do país e municípios só com bandeira branca.
+- **Qualidade dos dados:** postos com cadastro inconsistente, resumo por motivo, filtro e download em CSV.
+- **Sobre:** descrição da base, do tratamento e da limitação.
 
 ---
 
@@ -164,17 +169,34 @@ Arquivo completo: `exemplos/sinonimos_sem_numero.csv`.
 
 19 postos usavam o número por extenso e 497 tinham formatos diferentes do mesmo número.
 
-**6.3 Bandeiras (Naira).**
+**6.3 Bandeiras.** O dicionário `data/bandeiras.csv` tem 12 sinônimos, carregados na tabela `bandeira_sinonimo`. A coluna `posto.bandeira_original` guarda o nome como veio da ANP. As 64 bandeiras originais viram 63.
 
-> **A completar pela Naira:** dicionário de sinônimos das bandeiras (`data/bandeiras.csv`) e a decisão sobre `RAIZEN MIME` e `SP`.
->
-> Candidatos já identificados: grafia (`ATEM' S` e ``D`MAIS``), acento (`SABBÁ`, `ATLÂNTICA`) e nome com e sem sufixo (`PETROX DISTRIBUIDORA` e `PETROX`, `SETTA DISTRIBUIDORA`, `TDC DISTRIBUIDORA`...). `BANDEIRA BRANCA` (22.050 postos) significa "sem marca" e não é sinônimo de nenhuma bandeira.
+| Original | Padronizado | Tipo de variação |
+|---|---|---|
+| `ATEM' S` | `ATEM'S` | grafia (espaço indevido) |
+| ``D`MAIS`` | `D'MAIS` | grafia (acento grave no lugar do apóstrofo) |
+| `SABBÁ` | `SABBA` | acento |
+| `ATLÂNTICA` | `ATLANTICA` | acento |
+| `PETROX DISTRIBUIDORA` | `PETROX` | nome mais completo (sufixo) |
+| `SETTA DISTRIBUIDORA` | `SETTA` | nome mais completo (sufixo) |
+| `TDC DISTRIBUIDORA` | `TDC` | nome mais completo (sufixo) |
+| `J.R DISTRIBUIDORA` | `J.R` | nome mais completo (sufixo) |
+| `RZD DISTRIBUIDORA` | `RZD` | nome mais completo (sufixo) |
+| `SIM DISTRIBUIDOR` | `SIM` | nome mais completo (sufixo) |
+| `MASUT DISTRIBUIDORA` | `MASUT` | nome mais completo (sufixo) |
+| `RAIZEN MIME` | `RAIZEN` | marca com informação a mais |
+
+Decisões:
+
+- **`RAIZEN MIME`** (206 postos, 205 em Santa Catarina, 61 deles da rede `POSTO MIME S.A.`): unificada a `RAIZEN`, pois o nome contém a bandeira. É uma interpretação, e a unificação aumenta a participação da Raízen em Santa Catarina.
+- **`BANDEIRA BRANCA`** (22.050 postos) significa "sem marca" e **não** é sinônimo de nenhuma bandeira.
+- **`SP`** (314 postos, 169 no CE, 54 no MA, 37 no PI e 13 em MG, com razões sociais de pequenas empresas e pessoas físicas): não foi possível confirmar o que significa. Foi mantida como está e registrada como limitação.
 
 ---
 
 ## 7. Modelo relacional normalizado
 
-> **A completar e revisar pela Naira.** Rascunho com base no `sql/schema.sql`:
+Definido em `sql/schema.sql`.
 
 O esquema achatado foi **normalizado e desmembrado** em 8 tabelas:
 
@@ -203,7 +225,7 @@ O **HHI** é a soma dos quadrados das participações (em %) de cada concorrente
 - Entre os municípios com 10 postos ou mais, o mais concentrado é Flores da Cunha (RS, HHI 2.639) e os menos concentrados são Rio de Janeiro (17), São Paulo (19) e Goiânia (33).
 - Maior rede: SIM REDE DE POSTOS LTDA, com 213 postos em 83 municípios.
 - **1.491 municípios** têm apenas postos de bandeira branca.
-- O HHI **por bandeira** conta cada empresa de bandeira branca como concorrente separada; senão, os 22.050 postos sem marca virariam um só concorrente e inflariam o índice.
+- O HHI **por bandeira** (já com o dicionário aplicado) conta cada empresa de bandeira branca como concorrente separada; senão, os 22.050 postos sem marca virariam um só concorrente e inflariam o índice.
 
 Cidades com poucos postos têm HHI alto só por serem pequenas, então a análise usa um mínimo de postos.
 
@@ -223,7 +245,22 @@ python src/metricas.py      # HHI e rankings (pasta resultados/)
 
 Rode `clean.py` antes de `standardize.py`. O arquivo original fica em `data/raw/` (não vai ao Git).
 
-> **A completar pela Naira:** criação do banco `anp`, execução do `sql/schema.sql`, `python src/load.py` e `streamlit run src/app.py`.
+**Banco e aplicação (PostgreSQL):**
+
+1. No pgAdmin, criar o banco `anp` e executar o arquivo `sql/schema.sql` (Query Tool, F5).
+2. No terminal (PowerShell), definir a senha do PostgreSQL e carregar os dados. A senha fica só na sessão, não no código:
+
+```
+$env:DB_PASSWORD = "sua_senha"
+python src/load.py             # carga das 8 tabelas (usa data/bandeiras.csv)
+```
+
+3. Conferir a carga com as consultas de `sql/validacao.sql` (contagens e HHI, comparados com `resultados/`).
+4. Abrir a aplicação (mesma sessão do terminal):
+
+```
+streamlit run src/app.py
+```
 
 ## 10. Estrutura do projeto
 
@@ -233,8 +270,11 @@ projeto-anp/
 │   ├── raw/             # CSV original (não editado, fora do Git)
 │   └── processed/       # postos_limpo.csv (fora do Git)
 ├── exemplos/            # exemplos de dados não conformes e de antes/depois
+├── data/bandeiras.csv   # dicionário de sinônimos de bandeira
 ├── resultados/          # saídas de metricas.py (referência para validar o banco)
-├── sql/schema.sql       # esquema do banco
+├── sql/
+│   ├── schema.sql       # esquema do banco
+│   └── validacao.sql    # consultas de conferência da carga
 ├── src/
 │   ├── extract.py       # esquema original
 │   ├── perfil.py        # perfilamento
@@ -242,6 +282,7 @@ projeto-anp/
 │   ├── standardize.py   # endereço e sinônimos
 │   ├── metricas.py      # HHI e rankings
 │   ├── load.py          # carga no PostgreSQL
+│   ├── db.py            # leitura dos postos no banco
 │   └── app.py           # aplicação (Streamlit)
 └── requirements.txt
 ```
@@ -253,4 +294,5 @@ projeto-anp/
 - 776 endereços ficaram sem `tipo_logradouro` porque começam por palavras como `QI 19`, `PORTO DE AMATURA` ou `PADRE ANTONIO CORREIA DE SA`. O logradouro foi mantido inteiro.
 - 49 números trazem texto (`QD 01`, `LOTE14`, `397-NW`) e não foram quebrados em mais colunas, para não perder informação.
 - A base inclui autorizações de tipos diferentes (`PR`, `PF`, `AV`, `PM`, `GNV`). Todos entram nas contas, inclusive os 315 `AV`, provavelmente de aviação.
-- O HHI por bandeira depende do dicionário de sinônimos de bandeiras e só é definitivo depois que ele for aplicado.
+- `SP` (314 postos) é uma bandeira não identificada, mantida como veio. `RAIZEN MIME` foi unificada a `RAIZEN` por interpretação.
+- A carga foi testada com PostgreSQL local. A aplicação lê o banco com as credenciais de variáveis de ambiente (`DB_PASSWORD`), por isso só roda onde o banco existir.

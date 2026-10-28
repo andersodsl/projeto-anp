@@ -2,6 +2,7 @@ import os
 import pandas as pd
 
 CAMINHO = "data/processed/postos_limpo.csv"
+DICIONARIO = "data/bandeiras.csv"
 PASTA_SAIDA = "resultados"
 BRANCA = "BANDEIRA BRANCA"
 
@@ -10,6 +11,10 @@ def carregar(caminho=CAMINHO):
     """Lê o CSV tratado. dtype=str evita perder zeros (CEP, CNPJ)."""
     df = pd.read_csv(caminho, sep=";", dtype=str)
     df["flag_inconsistente"] = df["flag_inconsistente"] == "True"
+    if os.path.exists(DICIONARIO):                      # unifica os sinônimos de bandeira
+        dic = pd.read_csv(DICIONARIO, sep=";", dtype=str, encoding="utf-8-sig").dropna()
+        dic = dic.apply(lambda coluna: coluna.str.strip())
+        df["bandeira"] = df["bandeira_original"].replace(dict(zip(dic["sinonimo"], dic["bandeira_canonica"])))
     return df
 
 
