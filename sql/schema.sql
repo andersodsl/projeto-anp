@@ -25,12 +25,11 @@ CREATE TABLE endereco (
     tipo_logradouro VARCHAR(50),
     logradouro VARCHAR(200),
     numero VARCHAR(30),
-    sem_numero BOOLEAN NOT NULL DEFAULT FALSE,   -- era VARCHAR(10)
-    km VARCHAR(20),
+    sem_numero BOOLEAN NOT NULL DEFAULT FALSE,   
     complemento VARCHAR(150),
     cep CHAR(8),
-    municipio_id INTEGER NOT NULL REFERENCES municipio(id),  -- novo: o município fica aqui
-    bairro_id INTEGER REFERENCES bairro(id)                  -- agora aceita nulo (124 postos sem bairro)
+    municipio_id INTEGER NOT NULL REFERENCES municipio(id),  
+    bairro_id INTEGER REFERENCES bairro(id)                  
 );
 
 CREATE TABLE bandeira (
@@ -58,8 +57,7 @@ CREATE TABLE posto (
     data_publicacao DATE,
     data_vinculacao DATE,
     endereco_id INTEGER NOT NULL REFERENCES endereco(id),
-    -- municipio_id removido: já está em endereco
-    bandeira_original VARCHAR(150),             -- novo: guarda o nome antes dos sinônimos
+    bandeira_original VARCHAR(150),            
     bandeira_id INTEGER REFERENCES bandeira(id),
     flag_inconsistente BOOLEAN DEFAULT FALSE,
     motivo_inconsistencia TEXT

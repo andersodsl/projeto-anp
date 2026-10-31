@@ -11,7 +11,6 @@ PLACEHOLDERS = {"", "-", "--", "N/A", "NA", "NULL", "NONE", "NAO INFORMADO", "N�
 
 
 def limpar_texto(valor):
-    """Tira espaços duplicados/pontas e troca placeholders por nulo."""
     if pd.isna(valor):
         return None
     valor = re.sub(r"\s+", " ", valor).strip()
@@ -19,7 +18,6 @@ def limpar_texto(valor):
 
 
 def cnpj_valido(cnpj):
-    """Confere tamanho e dígitos verificadores do CNPJ."""
     if not isinstance(cnpj, str) or not re.fullmatch(r"\d{14}", cnpj) or len(set(cnpj)) == 1:
         return False
 
@@ -33,25 +31,22 @@ def cnpj_valido(cnpj):
 
 
 def limpar_cep(cep):
-    """Devolve (cep_corrigido, foi_corrigido). CEP inválido vira None."""
     if pd.isna(cep):
         return None, False
     digitos = re.sub(r"\D", "", cep)
     corrigido = False
-    if len(digitos) == 7:          # perdeu o zero à esquerda (ex.: 7401790 -> 07401790)
+    if len(digitos) == 7:      
         digitos, corrigido = digitos.zfill(8), True
     if len(digitos) != 8 or set(digitos) == {"0"}:
         return None, False
     return digitos, corrigido
 
 
-# ---------------------------------------------------------------- leitura
 bruto = pd.read_csv(CAMINHO, sep=";", dtype=str)
 df = bruto.copy()
 for coluna in df.columns:
     df[coluna] = df[coluna].map(limpar_texto)
 
-# ---------------------------------------------------------------- campos
 out = pd.DataFrame()
 out["cnpj"] = df["CNPJ"].str.replace(r"\D", "", regex=True)
 out["cnpj_raiz"] = out["cnpj"].str[:8]
@@ -65,10 +60,9 @@ vinculacao = pd.to_datetime(df["DATAVINCULACAO"], format="%d/%m/%Y", errors="coe
 out["data_publicacao"] = publicacao.dt.strftime("%Y-%m-%d")
 out["data_vinculacao"] = vinculacao.dt.strftime("%Y-%m-%d")
 
-# preenchidos depois, no standardize.py
 for coluna in ["tipo_logradouro", "logradouro", "numero", "sem_numero", "km"]:
     out[coluna] = None
-out["endereco_original"] = df["ENDERECO"]          # entrada do standardize.py
+out["endereco_original"] = df["ENDERECO"]       
 
 out["complemento"] = df["COMPLEMENTO"]
 ceps = df["CEP"].map(limpar_cep)
@@ -79,9 +73,8 @@ out["bairro"] = df["BAIRRO"]
 out["municipio"] = df["MUNICIPIO"].str.upper()
 out["uf"] = df["UF"].str.upper()
 out["bandeira_original"] = df["BANDEIRA"]
-out["bandeira"] = df["BANDEIRA"]                   # a Naira aplica o dicionário de sinônimos
+out["bandeira"] = df["BANDEIRA"]                  
 
-# ---------------------------------------------------------------- inconsistências
 problemas = pd.DataFrame({
     "cnpj_invalido": ~out["cnpj"].map(cnpj_valido),
     "cep_invalido": out["cep"].isna(),
@@ -95,7 +88,6 @@ problemas = pd.DataFrame({
 out["flag_inconsistente"] = problemas.any(axis=1)
 out["motivo_inconsistencia"] = problemas.apply(lambda linha: ";".join(linha.index[linha]), axis=1).replace("", None)
 
-# ---------------------------------------------------------------- saída
 colunas = ["cnpj", "cnpj_raiz", "codigo_isimp", "razao_social", "autorizacao", "tipo_autorizacao",
            "data_publicacao", "data_vinculacao", "tipo_logradouro", "logradouro", "numero",
            "sem_numero", "km", "complemento", "cep", "bairro", "municipio", "uf",
@@ -104,7 +96,6 @@ colunas = ["cnpj", "cnpj_raiz", "codigo_isimp", "razao_social", "autorizacao", "
 os.makedirs("data/processed", exist_ok=True)
 out[colunas].to_csv(SAIDA, index=False, sep=";", encoding="utf-8")
 
-# ---------------------------------------------------------------- exemplos antes/depois
 os.makedirs("exemplos", exist_ok=True)
 antes_depois_cep = pd.DataFrame({"cep_antes": bruto["CEP"], "cep_depois": out["cep"],
                                  "municipio": out["municipio"], "uf": out["uf"]})
@@ -113,7 +104,6 @@ mudou = bruto["RAZAOSOCIAL"] != out["razao_social"]
 pd.DataFrame({"razao_antes": bruto["RAZAOSOCIAL"], "razao_depois": out["razao_social"]})[mudou] \
     .to_csv("exemplos/antes_depois_razao_social.csv", index=False, sep=";", encoding="utf-8-sig")
 
-# ---------------------------------------------------------------- resumo
 print(f"Registros: {len(out)}")
 print(f"CEPs corrigidos (zero à esquerda): {int(cep_corrigido.sum())}")
 print(f"Razões sociais ajustadas (espaços): {int(mudou.sum())}")

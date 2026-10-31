@@ -4,7 +4,6 @@ import pandas as pd
 
 ARQUIVO = "data/processed/postos_limpo.csv"
 
-# Abreviações e variações do tipo de logradouro -> forma padrão
 TIPOS = {
     "AV": "AVENIDA", "AV.": "AVENIDA", "AVENIDA": "AVENIDA",
     "R": "RUA", "R.": "RUA", "RUA": "RUA",
@@ -18,7 +17,6 @@ TIPOS = {
     "LOC": "LOCALIDADE", "LOC.": "LOCALIDADE", "LOCALIDADE": "LOCALIDADE",
 }
 
-# Números por extenso (para "BR CENTO E UM" -> "BR 101")
 PALAVRAS_NUM = {
     "ZERO": 0, "UM": 1, "HUM": 1, "DOIS": 2, "TRES": 3, "TRÊS": 3, "QUATRO": 4, "CINCO": 5,
     "SEIS": 6, "SETE": 7, "OITO": 8, "NOVE": 9, "DEZ": 10, "ONZE": 11, "DOZE": 12,
@@ -31,9 +29,9 @@ PALAVRAS_NUM = {
 }
 _ALTERNATIVAS = "|".join(sorted(PALAVRAS_NUM, key=len, reverse=True))
 BR_EXTENSO = re.compile(rf"\bBR[\s-]+((?:(?:{_ALTERNATIVAS}|E)\b\s*)+)")
-BR_NUMERO = re.compile(r"\bBR\.?\s*-?\s*(\d{2,3})\b")             # BR-101, BR101, BR - 101 -> BR 101
-KM = re.compile(r"[\s,\-–]*\bKM\.?\s*[-,]?\s*(\d+(?:[.,]\d+)?(?:\+\d+)?)")   # KM 9, KM9, KM, 320, KM 13,8
-SEM_NUMERO = re.compile(r"^(S\s*[/.]?\s*N\s*[º°O]?\.?|SNR|S/|SEM\s+N[UÚ]MERO)$")  # S/N, SN, S N, S/Nº...
+BR_NUMERO = re.compile(r"\bBR\.?\s*-?\s*(\d{2,3})\b")             
+KM = re.compile(r"[\s,\-–]*\bKM\.?\s*[-,]?\s*(\d+(?:[.,]\d+)?(?:\+\d+)?)")   
+SEM_NUMERO = re.compile(r"^(S\s*[/.]?\s*N\s*[º°O]?\.?|SNR|S/|SEM\s+N[UÚ]MERO)$")  
 
 
 def br_por_extenso(m):
@@ -43,14 +41,12 @@ def br_por_extenso(m):
 
 
 def normalizar_numero(texto):
-    """9 A, 9-A e 9A viram 9A."""
     texto = texto.strip(" .-")
     m = re.fullmatch(r"(\d+)[\s-]*([A-Z])", texto)
     return f"{m.group(1)}{m.group(2)}" if m else texto
 
 
 def extrair_km(texto):
-    """Devolve (km, texto_sem_o_km). Se não houver KM, devolve (None, texto)."""
     m = KM.search(texto)
     if not m:
         return None, texto
@@ -65,12 +61,10 @@ def processar(endereco, complemento):
     tags = []
     e = re.sub(r"\s+", " ", endereco).strip().upper()
 
-    # "LOGRADOURO, NUMERO": separa na última vírgula
     m = re.match(r"^(.*),\s*([^,]*)$", e)
     logr, resto = (m.group(1), m.group(2)) if m else (e, "")
     resto_original = resto
 
-    # BR por extenso e formatos diferentes da mesma rodovia
     novo = BR_EXTENSO.sub(br_por_extenso, logr)
     if novo != logr:
         tags.append("br_por_extenso")
@@ -79,7 +73,6 @@ def processar(endereco, complemento):
         tags.append("br_formato")
     logr = re.sub(r"\s+", " ", novo2).strip()
 
-    # KM: no logradouro, no número ou no complemento
     km, logr = extrair_km(logr)
     if km is None:
         km, resto = extrair_km(resto)
@@ -92,7 +85,6 @@ def processar(endereco, complemento):
             compl = sem_km.strip(" ,-") or None
             tags.append("km_do_complemento")
 
-    # Número
     resto = resto.strip(" ,-")
     numero, sem_numero = None, True
     if resto and SEM_NUMERO.match(resto):
@@ -102,10 +94,9 @@ def processar(endereco, complemento):
         numero, sem_numero = normalizar_numero(resto), False
         if numero != resto:
             tags.append("numero_sufixo")
-    elif resto:                                   # texto sem número: volta para o logradouro
+    elif resto:                                 
         logr = f"{logr}, {resto}"
 
-    # Tipo do logradouro
     tokens = logr.split()
     while len(tokens) > 1 and tokens[0] in TIPOS and tokens[1] in TIPOS and TIPOS[tokens[0]] == TIPOS[tokens[1]]:
         tokens.pop(0)
@@ -130,8 +121,6 @@ def processar(endereco, complemento):
             "sem_numero": sem_numero, "km": km, "complemento": compl,
             "tags": ";".join(tags), "resto_original": resto_original}
 
-
-# ---------------------------------------------------------------- execução
 df = pd.read_csv(ARQUIVO, sep=";", dtype=str)
 res = pd.DataFrame([processar(e, c) for e, c in zip(df["endereco_original"], df["complemento"])])
 
@@ -139,7 +128,6 @@ for coluna in ["tipo_logradouro", "logradouro", "numero", "sem_numero", "km", "c
     df[coluna] = res[coluna]
 df.to_csv(ARQUIVO, index=False, sep=";", encoding="utf-8")
 
-# ---------------------------------------------------------------- exemplos antes/depois
 os.makedirs("exemplos", exist_ok=True)
 comparativo = pd.DataFrame({
     "endereco_antes": df["endereco_original"],
@@ -153,12 +141,10 @@ for regra in ["sem_numero_variante", "br_por_extenso", "br_formato", "tipo_dupli
     amostras.append(achados.head(15).assign(regra=regra))
 pd.concat(amostras).to_csv("exemplos/antes_depois_endereco.csv", index=False, sep=";", encoding="utf-8-sig")
 
-# sinônimos de "sem número": várias grafias para o mesmo significado
 sem = res.loc[res["sem_numero"] == True, "resto_original"].fillna("(vazio)").value_counts()
 sem.rename_axis("grafia_original").reset_index(name="quantidade") \
     .to_csv("exemplos/sinonimos_sem_numero.csv", index=False, sep=";", encoding="utf-8-sig")
 
-# ---------------------------------------------------------------- resumo
 print(f"Registros: {len(df)}")
 print("\nRegras aplicadas (quantos registros):")
 for regra in ["sem_numero_variante", "br_por_extenso", "br_formato", "tipo_duplicado", "tipo_abreviado",
